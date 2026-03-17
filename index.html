@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch Kiên Giang - Trang chủ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .font-handwriting {
+            font-family: 'Dancing Script', cursive;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .animate-vibe {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Tăng cường hiển thị chữ trên nền ảnh */
+        .text-shadow-lg {
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+</style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <div id="header-placeholder"></div>
+
+    <main class>
+        <section class="relative w-full h-[600px] md:h-screen overflow-hidden flex items-center justify-center">
+            <img src="images/hero-kiengiang.jpg" alt="Cảnh đẹp Kiên Giang" class="absolute inset-0 w-full h-full object-cover">
+            
+            <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
+                <div class="inline-block relative">
+                    
+                    <h1 class="text-7xl md:text-[12rem] font-black tracking-tighter leading-none italic opacity-10 absolute -top-16 md:-top-32 left-1/2 -translate-x-1/2 select-none text-white w-full">
+                    </h1>
+
+                    <div class="relative animate-vibe">
+                        <span class="block text-5xl md:text-8xl font-thin tracking-[0.01em] text-white/90 ml-[-70px] md:ml-[-500px] uppercase text-shadow-lg">
+                            DU LỊCH
+                        </span>
+                        <span class="font-handwriting block text-8xl md:text-[11rem] text-white mt-[-20px] md:mt-[-10px] mr-[-60px] md:mr-[-350px] drop-shadow-2xl">
+                            Kiên Giang
+                        </span>
+                    </div>
+
+                    <div class="mt-12 md:mt-16">
+                        <a href="#dia-danh" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-blue-600 hover:text-white hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300 group">
+                            Khám phá ngay
+                            <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-100">
+            <h2 style="font-family: 'Times New Roman', Times, serif;" 
+                class="text-5xl font-bold mb-12 flex items-center justify-center gap-3 text-center text-slate-800">
+                <i class="text-amber-500 w-8 h-8"></i> 
+                Về Kiên Giang
+            </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <p>
+                    "Kiên Giang - vùng đất tận cùng phía Tây Nam của Tổ quốc, nơi hội tụ của rừng vàng biển bạc, của những hòn đảo ngọc lung linh giữa vịnh Thái Lan."
+                </p>
+                <p class="text-slate-500 leading-relaxed">
+                    Đây là nơi sở hữu Phú Quốc – hòn đảo lớn nhất Việt Nam, cùng với Hà Tiên thập cảnh và quần đảo Nam Du hoang sơ. Kiên Giang không chỉ có biển, mà còn có những giá trị văn hóa lịch sử lâu đời và nền ẩm thực biển vô cùng phong phú.
+                </p>
+            </div>
+        </section>
+
+        <section id="dia-danh" class="max-w-5xl mx-auto px-6 py-20">
+            <h2 style="font-family: 'Times New Roman', Times, serif;" 
+                class="text-5xl font-bold mb-12 flex items-center justify-center gap-3 text-center text-slate-800">
+                <i class="text-amber-500 w-8 h-8"></i> 
+                Bài viết mới nhất
+            </h2>
+            
+            <div id="blog-container" class="flex flex-col gap-8">
+                </div>
+
+            <div class="text-center mt-12">
+                <a href="dia-danh.html" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all">
+                    Xem tất cả bài viết <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </section>
+        
+        <script src="js/blog-list.js"></script>
+        <script>
+            function renderFeaturedBlogs() {
+                const container = document.getElementById('blog-container');
+                
+                // Lấy 3 bài mới nhất
+                const featuredPosts = BLOG_POSTS.slice(0, 3);
+
+                container.innerHTML = featuredPosts.map(post => `
+                    <div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" onclick="window.location.href='${post.link}'">
+                        <div class="md:w-2/5 h-52 md:h-auto overflow-hidden">
+                            <img src="${post.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        
+                        <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                            <div class="flex items-center gap-3 text-xs font-medium text-blue-600 mb-3 uppercase tracking-wider">
+                                <span class="bg-blue-50 px-2 py-1 rounded">${post.category || 'Khám phá'}</span>
+                                <span class="text-slate-400 font-normal capitalize">${post.date}</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-blue-600 transition">
+                                ${post.title}
+                            </h3>
+                            
+                            <p class="text-slate-500 leading-relaxed mb-6 line-clamp-2 text-sm md:text-base">
+                                ${post.description}
+                            </p>
+                            
+                            <div class="flex items-center text-blue-600 font-bold text-sm gap-2">
+                                Đọc chi tiết <i data-lucide="move-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Quan trọng: Gọi lại Lucide để vẽ icon cho các Card mới render
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }
+
+            // Chạy hàm khi trang web tải xong
+            document.addEventListener('DOMContentLoaded', () => {
+                // ĐỔI TỪ renderBlogs() THÀNH renderFeaturedBlogs()
+                renderFeaturedBlogs(); 
+                
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            });
+        </script>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/shared-components.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
