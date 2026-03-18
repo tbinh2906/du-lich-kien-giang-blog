@@ -2,28 +2,101 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành viên - Nhóm Vibe Coding</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-slate-50 text-slate-900">
+
     <div id="header-placeholder"></div>
-    <main class="max-w-4xl mx-auto py-20 px-6 text-center">
-        <h1 class="text-4xl font-bold mb-10">Thành viên thực hiện</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <i data-lucide="user" class="text-blue-600 w-12 h-12"></i>
+
+    <main class="max-w-6xl mx-auto py-32 px-6">
+        <div class="text-center mb-24" data-aos="fade-up">
+            <h1 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Thành viên tham gia</h1>
+            <div class="h-1.5 w-20 bg-blue-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" 
+                 data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl group-hover:scale-110 transition-transform">H</div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight">Hà Lưu<br>Thanh Bình</h3>
                 </div>
-                <h3 class="text-xl font-bold">Nguyễn Văn A</h3>
-                <p class="text-slate-500 uppercase text-xs tracking-widest mt-2">Trưởng nhóm / Coder</p>
+                <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                    <i data-lucide="crown" class="w-4 h-4"></i> Trưởng nhóm
+                </div>
+                <div class="text-blue-600/70 font-medium text-xs px-3 py-1 bg-slate-100 rounded-full inline-block">Coder chính</div>
             </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" 
+                 data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl group-hover:bg-blue-600 transition-colors">L</div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight">Lê Minh<br>Tân</h3>
+                </div>
+                <div class="text-slate-500 font-medium text-sm px-4 py-1.5 bg-slate-100 rounded-full inline-block">Coder chính</div>
             </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" 
+                 data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl group-hover:bg-blue-600 transition-colors">L</div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight">Lê Thùy<br>Trâm</h3>
+                </div>
+                <div class="text-slate-500 font-medium text-sm px-4 py-1.5 bg-slate-100 rounded-full inline-block">Blogger</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" 
+                 data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl group-hover:bg-blue-600 transition-colors">N</div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight">Nguyễn Ngọc<br>Tuệ Nhi</h3>
+                </div>
+                <div class="text-slate-500 font-medium text-sm px-4 py-1.5 bg-slate-100 rounded-full inline-block">Blogger</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" 
+                 data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl group-hover:bg-blue-600 transition-colors">Â</div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight">Âu Gia<br>Thảo</h3>
+                </div>
+                <div class="text-slate-500 font-medium text-sm px-4 py-1.5 bg-slate-100 rounded-full inline-block">Designer</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" 
+                 data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl group-hover:bg-blue-600 transition-colors">L</div>
+                    <h3 class="text-xl font-bold text-slate-900 leading-tight">Lê Quỳnh<br>Như</h3>
+                </div>
+                <div class="text-slate-500 font-medium text-sm px-4 py-1.5 bg-slate-100 rounded-full inline-block">Designer</div>
+            </div>
+        </div>
     </main>
 
     <div id="footer-placeholder"></div>
-    <script src="js/shared-components.js"></script>
 
+    <script src="js/shared-components.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000, // Thời gian hiệu ứng (ms)
+            easing: 'ease-out-back', // Loại hiệu ứng (mượt mà, hơi nảy lại)
+            once: true // Hiệu ứng chỉ chạy một lần khi cuộn qua
+        });
+    </script>
 </body>
 </html>
