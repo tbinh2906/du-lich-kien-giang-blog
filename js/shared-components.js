@@ -17,13 +17,48 @@ const sharedComponents = {
 
     // 2. Footer (Giữ nguyên)
     footer: `
-    <footer class="bg-slate-900 text-white py-16 px-6 mt-20">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-2xl font-bold mb-4 font-serif italic">Du lịch Kiên Giang</h3>
-            <p class="text-slate-400 mb-8 font-light italic">Website giới thiệu các địa danh nổi bật</p>
-            <div class="h-[1px] w-20 bg-blue-500 mx-auto mb-8 opacity-50"></div>
-            <p class="text-slate-300 font-semibold mb-2">12A2 | Tin học 12</p>
-            <p class="text-slate-500 text-sm italic">&copy; 2026 - Nhóm Vibe Coding</p>
+    <footer class="bg-slate-50 border-t border-slate-100 pt-20 pb-10 px-6 font-sans">
+        <div class="max-w-5xl mx-auto flex flex-col items-center">
+            
+            <div class="flex items-center gap-2 mb-4 group cursor-pointer">
+                <div class="bg-slate-900 text-white p-1.5 rounded-lg group-hover:bg-blue-600 transition-colors">
+                    <i data-lucide="book-open-check" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 tracking-tight">Du lịch Kiên Giang</h3>
+            </div>
+
+            <p class="text-slate-500 text-center max-w-sm mb-10 leading-relaxed">
+                Khám phá vẻ đẹp biển đảo, văn hóa và con người vùng đất Kiên Giang qua những góc nhìn mới mẻ.
+            </p>
+
+            <div class="w-full max-w-md mb-16">
+                <div class="relative flex items-center">
+                    <input type="email" placeholder="Nhận bản tin qua email..." 
+                        class="w-full bg-slate-50 border border-slate-200 rounded-full py-3.5 px-6 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all">
+                    <button class="absolute right-1.5 bg-slate-900 text-white p-2.5 rounded-full hover:bg-blue-600 transition-all shadow-lg">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full h-[1px] bg-slate-100 mb-10"></div>
+
+            <div class="w-full flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-slate-400 text-sm">
+                    &copy; 2026 <span class="text-slate-900 font-semibold">Du lịch Kiên Giang</span>. All rights reserved.
+                    <br class="md:hidden">
+                    <span class="hidden md:inline mx-2 text-slate-200">|</span>
+                    Crafted with <span class="text-red-500">❤️</span> by <span class="font-medium text-slate-600">Vibe Coding - 12A2</span>
+                </div>
+
+                <div class="flex items-center gap-6 text-slate-400">
+                    <a href="#" class="hover:text-blue-600 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-blue-600 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-blue-600 transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-blue-600 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-blue-600 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                </div>
+            </div>
         </div>
     </footer>`,
 
@@ -88,7 +123,7 @@ const sharedComponents = {
             const selected = shuffled.slice(0, 3);
 
             container.innerHTML = `
-                <div class="mt-24">
+                <div class="mt-24 mb-16">
                     <hr class="mx-auto border-slate-200 mb-16">
                     
                     <h2 style="font-family: 'Times New Roman', Times, serif;" 
